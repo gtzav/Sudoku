@@ -1,0 +1,25 @@
+{
+  "@@locale": "el",
+
+  "appTitle": "Σουντόκου",
+
+  "difficultyEasy": "Εύκολο",
+  "difficultyMedium": "Μεσαίο",
+  "difficultyHard": "Δύσκολο",
+
+  "mistakes": "Λάθη: {count}",
+
+  "newGame": "Νέο παιχνίδι",
+  "newGameWithDifficulty": "Νέο παιχνίδι: {difficulty}",
+
+  "notesTooltip": "Σημειώσεις (P)",
+  "eraseTooltip": "Διαγραφή (Del)",
+
+  "language": "Γλώσσα",
+  "systemLanguage": "Γλώσσα συστήματος",
+
+  "solvedTitle": "Λύθηκε!",
+  "solvedMessage": "{difficulty} σε {time}, {count, plural, =0{χωρίς λάθη} =1{με 1 λάθος} other{με {count} λάθη}}.",
+
+  "close": "Κλείσιμο"
+}

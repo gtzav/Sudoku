@@ -1,0 +1,42 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Sudoku",
+  "@appTitle": { "description": "App and app bar title" },
+
+  "difficultyEasy": "Easy",
+  "difficultyMedium": "Medium",
+  "difficultyHard": "Hard",
+
+  "mistakes": "Mistakes: {count}",
+  "@mistakes": {
+    "description": "Mistake counter in the status row",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "newGame": "New game",
+  "newGameWithDifficulty": "New {difficulty} game",
+  "@newGameWithDifficulty": {
+    "description": "Item in the new-game menu",
+    "placeholders": { "difficulty": { "type": "String" } }
+  },
+
+  "notesTooltip": "Notes (P)",
+  "eraseTooltip": "Erase (Del)",
+
+  "language": "Language",
+  "systemLanguage": "System default",
+
+  "solvedTitle": "Solved!",
+  "solvedMessage": "{difficulty} in {time}, {count, plural, =0{no mistakes} =1{1 mistake} other{{count} mistakes}}.",
+  "@solvedMessage": {
+    "description": "Body of the dialog shown when the puzzle is solved",
+    "placeholders": {
+      "difficulty": { "type": "String" },
+      "time": { "type": "String" },
+      "count": { "type": "int" }
+    }
+  },
+
+  "close": "Close"
+}
