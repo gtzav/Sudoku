@@ -18,23 +18,20 @@ l10n.yaml                  gen-l10n configuration
 test/widget_test.dart      generator tests
 ```
 
-The tarball contains only the Dart sources. Flutter generates the
-platform folders (`linux/`, `android/`, ...) for your SDK version.
-
 ## Run
 
 ```sh
-tar -xzf sudoku_flutter.tar.gz
-cd sudoku_flutter
-flutter create --project-name sudoku_flutter .   # adds platform folders; keeps existing files
+git clone https://github.com/gtzav/Sudoku.git
+cd sudoku
+flutter create --project-name sudoku .   # adds platform folders; keeps existing files
 flutter pub get
-flutter gen-l10n                                  # generates lib/l10n/app_localizations*.dart
-flutter run -d linux                              # or: -d chrome, -d android, ...
+flutter gen-l10n                         # generates lib/l10n/app_localizations*.dart
+flutter run -d linux                     # or: -d chrome, -d android, ...
 ```
 
 `flutter create` doesn't overwrite files that already exist, so `lib/`,
 `test/` and `pubspec.yaml` stay as they are. To create only the Linux runner,
-use `flutter create --platforms=linux --project-name sudoku_flutter .`
+use `flutter create --platforms=linux --project-name sudoku .`
 
 If `flutter run -d linux` complains about missing tools, run `flutter doctor`.
 On Debian/Ubuntu the Linux desktop toolchain is usually:
@@ -47,9 +44,10 @@ Tests: `flutter test`
 
 ## Localization
 
-The app ships in English and Greek. It follows the system language and falls
-back to English, and the translate icon in the app bar overrides that at
-runtime. To test Greek without the menu: `LANG=el_GR.UTF-8 flutter run -d linux`.
+The app ships in English, Greek and other languages. It follows the system
+language and falls back to English, and the translate icon in the app bar
+overrides that at runtime. To test Greek without the menu: `LANG=el_GR.UTF-8
+flutter run -d linux`.
 
 To add a language, for example German:
 
