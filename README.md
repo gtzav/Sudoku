@@ -22,7 +22,7 @@ test/widget_test.dart      generator tests
 
 ```sh
 git clone https://github.com/gtzav/Sudoku.git
-cd sudoku
+cd Sudoku
 flutter create --project-name sudoku .   # adds platform folders; keeps existing files
 flutter pub get
 flutter gen-l10n                         # generates lib/l10n/app_localizations*.dart
