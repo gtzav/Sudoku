@@ -1,0 +1,28 @@
+{
+"@@locale": "fr",
+
+"appTitle": "Sudoku",
+
+"difficultyEasy": "Facile",
+"difficultyMedium": "Moyen",
+"difficultyHard": "Difficile",
+
+"mistakes": "Erreurs : {count}",
+
+"newGame": "Nouvelle partie",
+"newGameWithDifficulty": "Nouvelle partie : {difficulty}",
+
+"notesTooltip": "Notes (P)",
+
+"eraseTooltip": "Supprimer (Del)",
+
+"language": "Langue",
+
+"systemLanguage": "Langue du système",
+
+"solvedTitle": "Résolu !",
+
+"solvedMessage": "{difficulty} en {time}, {count, plural, =0{aucune erreur} =1{avec 1 erreur} other{avec {count} erreurs}}.",
+
+"close": "Fermer"
+}

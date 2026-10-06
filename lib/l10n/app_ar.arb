@@ -1,0 +1,29 @@
+{
+"@@locale": "ar",
+
+"appTitle": "Sudoku",
+
+"difficultyEasy": "سهل",
+
+"difficultyMedium": "متوسط",
+
+"difficultyHard": "صعب",
+
+"mistakes": "الأخطاء: {count}",
+
+"newGame": "لعبة جديدة",
+
+"newGameWithDifficulty": "لعبة جديدة: {difficulty}",
+
+"notesTooltip": "ملاحظات (P)",
+
+"eraseTooltip": "حذف (Del)",
+
+"language": "اللغة",
+"systemLanguage": "لغة النظام",
+
+"solvedTitle": "تم الحل!",
+"solvedMessage": "{difficulty} in {time}, {count, plural, =0{no errors} =1{with 1 error} other{with {count} errors}}.",
+
+"close": "إغلاق"
+}
