@@ -1,24 +1,17 @@
-{"@@locale": "es",
-
-"appTitle": "Sudoku",
-
-"difficultyEasy": "Fácil",
-"difficultyMedium": "Medio",
-"difficultyHard": "Difícil",
-
-"mistakes": "Errores: {count}",
-
-"newGame": "Nueva partida",
-"newGameWithDifficulty": "Nueva partida: {difficulty}",
-
-"notesTooltip": "Notas (P)",
-"eraseTooltip": "Borrar (Del)",
-
-"language": "Idioma",
-"systemLanguage": "Idioma del sistema",
-
-"solvedTitle": "¡Resuelto!",
-"solvedMessage": "{dificultad} en {time}, {count, plural, =0{sin errores} =1{con 1 error} other{con {count} errores}}.",
-
-"close": "Cerrar"
+{
+  "@@locale": "es",
+  "appTitle": "Sudoku",
+  "difficultyEasy": "Fácil",
+  "difficultyMedium": "Medio",
+  "difficultyHard": "Difícil",
+  "mistakes": "Errores: {count}",
+  "newGame": "Nueva partida",
+  "newGameWithDifficulty": "Nueva partida: {difficulty}",
+  "notesTooltip": "Notas (P)",
+  "eraseTooltip": "Borrar (Del)",
+  "language": "Idioma",
+  "systemLanguage": "Idioma del sistema",
+  "solvedTitle": "¡Resuelto!",
+  "solvedMessage": "{difficulty} en {time}, {count, plural, =0{sin errores} =1{con 1 error} other{con {count} errores}}.",
+  "close": "Cerrar"
 }

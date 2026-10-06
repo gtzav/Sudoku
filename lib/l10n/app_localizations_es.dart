@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -50,12 +49,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get solvedTitle => '¡Resuelto!';
 
   @override
-  String solvedMessage(
-    String difficulty,
-    String time,
-    int count,
-    Object dificultad,
-  ) {
+  String solvedMessage(String difficulty, String time, int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -63,7 +57,7 @@ class AppLocalizationsEs extends AppLocalizations {
       one: 'con 1 error',
       zero: 'sin errores',
     );
-    return '$dificultad en $time, $_temp0.';
+    return '$difficulty en $time, $_temp0.';
   }
 
   @override

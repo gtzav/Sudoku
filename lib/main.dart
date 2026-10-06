@@ -11,6 +11,26 @@ import 'src/sudoku.dart';
 
 void main() => runApp(const SudokuApp());
 
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const ColoredBox(
+      color: Colors.white, // same color as in flutter_native_splash
+      child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(24),
+          child: Image(
+            image: AssetImage('assets/splash.png'),
+            fit: BoxFit.contain, // whole image, never cropped
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class SudokuApp extends StatefulWidget {
   const SudokuApp({super.key});
 
@@ -21,6 +41,15 @@ class SudokuApp extends StatefulWidget {
 class _SudokuAppState extends State<SudokuApp> {
   /// null = follow the system language.
   Locale? _locale;
+  bool _showSplash = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 3), () {
+      if (mounted) setState(() => _showSplash = false);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +67,20 @@ class _SudokuAppState extends State<SudokuApp> {
         brightness: Brightness.dark,
         useMaterial3: true,
       ),
-      home: SudokuPage(
-        locale: _locale,
-        onLocaleChanged: (l) => setState(() => _locale = l),
-      ),
+      // home: SudokuPage(
+      //   locale: _locale,
+      //   onLocaleChanged: (l) => setState(() => _locale = l),
+      // ),
+
+      home: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 400),
+        child: _showSplash
+            ? const SplashScreen()
+            : SudokuPage(
+                locale: _locale,
+                onLocaleChanged: (l) => setState(() => _locale = l),
+              ),
+      )
     );
   }
 }
@@ -128,7 +167,7 @@ class _SudokuPageState extends State<SudokuPage> {
           content: Text(l10n.solvedMessage(
             _difficultyName(l10n, _game.difficulty),
             _fmt(_game.elapsed),
-            _game.mistakes,
+            _game.mistakes
           )),
           actions: [
             TextButton(
@@ -203,8 +242,14 @@ class _SudokuPageState extends State<SudokuPage> {
               itemBuilder: (context) => [
                 PopupMenuItem(value: '', child: Text(l10n.systemLanguage)),
                 // Language names in their own language, by convention.
-                const PopupMenuItem(value: 'en', child: Text('English')),
+                const PopupMenuItem(value: 'ar', child: Text('عربي')),
+                const PopupMenuItem(value: 'de', child: Text('Deutsch')),
                 const PopupMenuItem(value: 'el', child: Text('Ελληνικά')),
+                const PopupMenuItem(value: 'en', child: Text('English')),
+                const PopupMenuItem(value: 'es', child: Text('Español')),
+                const PopupMenuItem(value: 'fr', child: Text('Français')),
+                const PopupMenuItem(value: 'it', child: Text('Italiano')),
+                const PopupMenuItem(value: 'zh', child: Text('中国人')),
               ],
             ),
             PopupMenuButton<Difficulty>(
